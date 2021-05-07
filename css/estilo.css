@@ -1,0 +1,273 @@
+/*Variables*/
+/*Estilo de paginas*/
+body {
+  margin: 0%;
+  padding: 0%; }
+
+#grilla {
+  margin: 0%;
+  padding: 0%;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 17% 7% 68% 8%;
+  grid-template-areas: "header" "nav" "section" "footer";
+  grid-row-gap: 7px; }
+
+/*HEADER*/
+header {
+  background-color: white;
+  background-position: center;
+  grid-area: header; }
+
+.tituloHeader {
+  color: goldenrod;
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: lighter;
+  text-align: center; }
+
+/*FIN DEL HEADER*/
+/*NAV*/
+nav {
+  background-color: teal;
+  grid-area: nav; }
+
+#menu {
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 100%;
+  justify-items: center;
+  align-items: center; }
+  #menu li {
+    position: relative;
+    background-color: teal; }
+    #menu li a {
+      color: white;
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px; }
+  #menu li:hover {
+    background-color: goldenrod; }
+  #menu li:hover #listaDos {
+    display: block;
+    width: 200px;
+    padding: 0; }
+
+#listaDos {
+  position: absolute;
+  display: none; }
+  #listaDos li {
+    display: block;
+    width: 100%; }
+
+/*FIN DEL NAV*/
+/*SECTIONS*/
+section {
+  background-image: url(../imagenes/FondoPlantas.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  grid-area: section;
+  align-content: center;
+  display: flex; }
+
+.tituloSection {
+  font-family: "Playfair Display", serif;
+  color: goldenrod;
+  text-align: left;
+  padding-left: 10px; }
+
+/*SECTION INDEX*/
+#sectionIndex {
+  flex-direction: row-reverse; }
+
+#slogan {
+  padding-right: 100px;
+  padding-top: 150px;
+  margin-right: 50px;
+  height: 200px;
+  width: 450px; }
+  #slogan p {
+    color: goldenrod;
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: lighter;
+    text-align: center; }
+
+/* FIN SECTION INDEX*/
+/*SECTION QUIENES SOMOS*/
+#nosotras {
+  background-image: url(../imagenes/nosotrasUno.jpeg);
+  height: 300px;
+  width: 400px;
+  background-size: 100%;
+  margin-left: 200px;
+  margin-top: 20px;
+  border-radius: 10px; }
+
+#contenedorQuienes {
+  display: block; }
+
+#tituloQuienes {
+  padding-left: 200px;
+  font-size: 40px;
+  width: 300px;
+  height: 50px; }
+
+#relato {
+  padding-left: 250px;
+  color: goldenrod;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  text-align: left;
+  font-weight: lighter;
+  width: 400px; }
+
+/*FIN SECTION QUIENES SOMOS*/
+/*SECTION CONTACTOS*/
+ol, tr, #datos, #formulario {
+  color: black;
+  font-family: 'Montserrat', serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left; }
+
+#contenedorDatos, #contenedorForm {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  padding-left: 700px; }
+
+#tituloContact {
+  padding-right: 30px;
+  padding-left: 35px;
+  font-size: 40px; }
+
+#datos {
+  padding-top: 20px;
+  padding-right: 100px;
+  padding-bottom: 10px; }
+
+#comentario {
+  padding-left: 100px;
+  padding-right: 10px;
+  padding-top: 90px; }
+
+#formulario {
+  padding-right: 100px; }
+
+#contenedorBotones {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 100px; }
+
+/*FIN SECTION CONTACTOS*/
+/*SECTION PROPIEDADES*/
+#titPropiedades, #titContactos {
+  padding-top: 38px; }
+
+#cards {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+#cardUno, #cardDos, #cardTres {
+  background-color: rgba(128, 128, 128, 0.829);
+  display: inline;
+  padding: 20px;
+  margin: 20px;
+  margin-left: 40px; }
+
+.cardP {
+  color: white; }
+
+/*FIN SECTION CONTACTOS*/
+/*SECTION PRODUCTOS*/
+#galeria {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "izquierda  derecha"; }
+
+#galeriaBudines {
+  grid-area: izquierda;
+  margin-top: 70px;
+  margin-left: 50px;
+  height: 400px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: 36% 20%;
+  grid-template-rows: 20% 20% 20% 20%;
+  grid-template-areas: "budinDos  budinUno" "budinDos  budinUno" "budinTres budinUno" "budinTres budinUno";
+  grid-row-gap: 7px;
+  grid-column-gap: 7px; }
+
+#budinUno {
+  grid-area: budinUno; }
+  #budinUno img {
+    max-height: 100%; }
+
+#budinDos {
+  grid-area: budinDos; }
+  #budinDos img {
+    max-width: 100%;
+    max-height: 100%; }
+
+#budinTres {
+  grid-area: budinTres; }
+  #budinTres img {
+    max-height: 101%; }
+
+#galeriaAlfajores {
+  padding-left: 100px;
+  grid-area: derecha;
+  margin-top: 70px;
+  height: 400px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: 20% 36%;
+  grid-template-rows: 20% 20% 20% 20%;
+  grid-template-areas: "alfajorUno  alfajorDos" "alfajorUno  alfajorDos" "alfajorUno  alfajorTres" "alfajorUno  alfajorTres";
+  grid-row-gap: 7px;
+  grid-column-gap: 7px; }
+
+#alfajorUno {
+  grid-area: alfajorUno; }
+  #alfajorUno img {
+    max-height: 200%;
+    max-width: 100%; }
+
+#alfajorDos {
+  grid-area: alfajorDos; }
+  #alfajorDos img {
+    max-height: 100%; }
+
+#alfajorTres {
+  grid-area: alfajorTres; }
+  #alfajorTres img {
+    height: 100%;
+    width: 100%; }
+
+/*FIN SECTION PRODUCTOS*/
+/*FOOTER*/
+footer {
+  background: grey;
+  grid-area: footer; }
+  footer p {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    text-align: center; }
+
+.cambiosBoot {
+  padding-top: 15px; }
+
+/*FIN DEL FOOTER*/
