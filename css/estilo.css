@@ -195,25 +195,28 @@ ol, tr, #datos, #formulario {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
-  grid-template-areas: "izquierda  derecha"; }
+  grid-template-areas: "izquierda  derecha";
+  align-items: center;
+  justify-items: left; }
 
 #galeriaBudines {
   grid-area: izquierda;
   margin-top: 70px;
-  margin-left: 50px;
+  margin-left: 90px;
   height: 400px;
   width: 700px;
   display: grid;
-  grid-template-columns: 36% 20%;
+  grid-template-columns: 36% 36%;
   grid-template-rows: 20% 20% 20% 20%;
   grid-template-areas: "budinDos  budinUno" "budinDos  budinUno" "budinTres budinUno" "budinTres budinUno";
   grid-row-gap: 7px;
   grid-column-gap: 7px; }
 
 #budinUno {
-  grid-area: budinUno; }
-  #budinUno img {
-    max-height: 100%; }
+  grid-area: budinUno;
+  background-image: url(../imagenes/fotoDos.jpg);
+  background-position: center;
+  background-size: 100%; }
 
 #budinDos {
   grid-area: budinDos; }
@@ -227,22 +230,22 @@ ol, tr, #datos, #formulario {
     max-height: 101%; }
 
 #galeriaAlfajores {
-  padding-left: 100px;
   grid-area: derecha;
   margin-top: 70px;
   height: 400px;
   width: 700px;
   display: grid;
-  grid-template-columns: 20% 36%;
+  grid-template-columns: 30% 36%;
   grid-template-rows: 20% 20% 20% 20%;
-  grid-template-areas: "alfajorUno  alfajorDos" "alfajorUno  alfajorDos" "alfajorUno  alfajorTres" "alfajorUno  alfajorTres";
+  grid-template-areas: "alfajorUno alfajorDos" "alfajorUno alfajorDos" "alfajorUno alfajorTres" "alfajorUno alfajorTres";
   grid-row-gap: 7px;
-  grid-column-gap: 7px; }
+  grid-column-gap: 8px;
+  justify-content: end; }
 
 #alfajorUno {
   grid-area: alfajorUno; }
   #alfajorUno img {
-    max-height: 200%;
+    max-height: 100%;
     max-width: 100%; }
 
 #alfajorDos {
