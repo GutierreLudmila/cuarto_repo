@@ -55,7 +55,7 @@ nav {
       transition: 1s; }
   #menu li a:hover {
     color: goldenrod;
-    font-size: 25px; }
+    font-size: 22px; }
   #menu li:hover #listaDos {
     display: block;
     width: 200px;
@@ -197,74 +197,113 @@ label {
 /*FIN SECTION CONTACTOS*/
 /*SECTION PRODUCTOS*/
 #galeria {
-  width: 80%;
+  margin: 0%;
+  padding: 0%;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  grid-template-areas: "izquierda  derecha";
-  align-items: center;
-  justify-items: left; }
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "item1 item2 item3 item4 item5" "item6 item7 item8 item9 item10" "item11 item12 item13 item14 item15"; }
 
-#galeriaBudines {
-  grid-area: izquierda;
-  margin-top: 70px;
-  margin-left: 90px;
-  height: 400px;
-  width: 700px;
-  display: grid;
-  grid-template-columns: 36% 36%;
-  grid-template-rows: 20% 20% 20% 20%;
-  grid-template-areas: "budinDos  budinUno" "budinDos  budinUno" "budinTres budinUno" "budinTres budinUno";
-  grid-row-gap: 7px;
-  grid-column-gap: 7px; }
+/*
+#galeria{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "izquierda  derecha";
+    align-items: center;
+    justify-items: left;
+}
+#galeriaBudines{
+    grid-area: izquierda;
+    margin-top: 70px;
+    margin-left: 90px;
+    height: 400px;
+    width:700px;
+    display: grid;
+    grid-template-columns: 36% 36%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-areas: 
+    "budinDos  budinUno"
+    "budinDos  budinUno"
+    "budinTres budinUno"
+    "budinTres budinUno";
+    grid-row-gap: 7px;
+    grid-column-gap: 7px;
+    
+}
+#budinUno{
+    grid-area: budinUno;
+    background-image: url(../imagenes/fotoDos.jpg);
+    background-position: center;
+    background-size: 100%;
+}
 
-#budinUno {
-  grid-area: budinUno;
-  background-image: url(../imagenes/fotoDos.jpg);
-  background-position: center;
-  background-size: 100%; }
 
-#budinDos {
-  grid-area: budinDos; }
-  #budinDos img {
-    max-width: 100%;
-    max-height: 100%; }
+#budinDos{
+    grid-area: budinDos;
+    
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
 
-#budinTres {
-  grid-area: budinTres; }
-  #budinTres img {
-    max-height: 101%; }
+#budinTres{
+    grid-area: budinTres;
+    img{
+        max-height: 101%;
+    }
+}
 
-#galeriaAlfajores {
-  grid-area: derecha;
-  margin-top: 70px;
-  height: 400px;
-  width: 700px;
-  display: grid;
-  grid-template-columns: 30% 36%;
-  grid-template-rows: 20% 20% 20% 20%;
-  grid-template-areas: "alfajorUno alfajorDos" "alfajorUno alfajorDos" "alfajorUno alfajorTres" "alfajorUno alfajorTres";
-  grid-row-gap: 7px;
-  grid-column-gap: 8px;
-  justify-content: end; }
+#galeriaAlfajores{
+    grid-area: derecha;
+    margin-top: 70px;
+    height: 400px;
+    width:700px;
+    display: grid;
+    grid-template-columns: 30% 36%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-areas: 
+    "alfajorUno alfajorDos"
+    "alfajorUno alfajorDos"
+    "alfajorUno alfajorTres"
+    "alfajorUno alfajorTres";
+    grid-row-gap: 7px;
+    grid-column-gap: 8px;
+    justify-content:end;
+}
 
-#alfajorUno {
-  grid-area: alfajorUno; }
-  #alfajorUno img {
-    max-height: 100%;
-    max-width: 100%; }
+#alfajorUno{
+    grid-area: alfajorUno;
+    img{
+        max-height: 100%;
+        max-width: 100%;
+        
+    }
+}
 
-#alfajorDos {
-  grid-area: alfajorDos; }
-  #alfajorDos img {
-    max-height: 100%; }
+#alfajorDos{
+    grid-area: alfajorDos;
+    img{
+        max-height: 100%;
+        
+        
+    }
+}
 
-#alfajorTres {
-  grid-area: alfajorTres; }
-  #alfajorTres img {
-    height: 100%;
-    width: 100%; }
 
+
+#alfajorTres{
+    grid-area: alfajorTres;
+    img{
+        height: 100%;
+        width: 100%;
+        
+    }
+}
+*/
 /*FIN SECTION PRODUCTOS*/
 /*SECTION BUDINES*/
 #preciosBudines {
