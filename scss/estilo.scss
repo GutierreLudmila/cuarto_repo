@@ -31,7 +31,7 @@ body{
 header{
     background-color: white;
     grid-area: header;
-
+    
 }
 .tituloHeader{
     color: $colorTitulos;
@@ -236,118 +236,155 @@ label{
 /*FIN SECTION CONTACTOS*/
 /*SECTION PRODUCTOS*/
 #galeria{
+    height: 100%;
+    width: 100%;
     margin: 0%;
-    padding: 0%;
+    padding: 5px;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 18% 18% 18% 18%;
+    grid-template-rows: 32% 32% 32% ;
     grid-template-areas: 
-                        "item1 item2 item3 item4 item5"
-                        "item6 item7 item8 item9 item10"
-                        "item11 item12 item13 item14 item15"
+    "item1  item2  item3  item4 "
+    "item1  item5  item6  item8 "
+    "item7  item9 item10  item8"
     ;
-
-}
-/*
-#galeria{
-    width: 80%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-template-areas: 
-    "izquierda  derecha";
-    align-items: center;
-    justify-items: left;
-}
-#galeriaBudines{
-    grid-area: izquierda;
-    margin-top: 70px;
-    margin-left: 90px;
-    height: 400px;
-    width:700px;
-    display: grid;
-    grid-template-columns: 36% 36%;
-    grid-template-rows: 20% 20% 20% 20%;
-    grid-template-areas: 
-    "budinDos  budinUno"
-    "budinDos  budinUno"
-    "budinTres budinUno"
-    "budinTres budinUno";
-    grid-row-gap: 7px;
+    grid-row-gap: 5px;
     grid-column-gap: 7px;
-    
+    justify-content: center;
 }
-#budinUno{
-    grid-area: budinUno;
-    background-image: url(../imagenes/fotoDos.jpg);
-    background-position: center;
-    background-size: 100%;
+.imagen_galeria{
+    width: 96%;
+    height: 96%;
 }
+#item1{
+    grid-area: item1;
 
-
-#budinDos{
-    grid-area: budinDos;
-    
     img{
-        max-width: 100%;
-        max-height: 100%;
+        transition: 1s;
     }
-}
 
-#budinTres{
-    grid-area: budinTres;
-    img{
-        max-height: 101%;
-    }
-}
-
-#galeriaAlfajores{
-    grid-area: derecha;
-    margin-top: 70px;
-    height: 400px;
-    width:700px;
-    display: grid;
-    grid-template-columns: 30% 36%;
-    grid-template-rows: 20% 20% 20% 20%;
-    grid-template-areas: 
-    "alfajorUno alfajorDos"
-    "alfajorUno alfajorDos"
-    "alfajorUno alfajorTres"
-    "alfajorUno alfajorTres";
-    grid-row-gap: 7px;
-    grid-column-gap: 8px;
-    justify-content:end;
-}
-
-#alfajorUno{
-    grid-area: alfajorUno;
-    img{
-        max-height: 100%;
-        max-width: 100%;
-        
-    }
-}
-
-#alfajorDos{
-    grid-area: alfajorDos;
-    img{
-        max-height: 100%;
-        
-        
-    }
-}
-
-
-
-#alfajorTres{
-    grid-area: alfajorTres;
-    img{
+    img:hover{
         height: 100%;
         width: 100%;
-        
     }
 }
-*/
+#item2{
+    grid-area: item2;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+#item3{
+    grid-area: item3;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#item4{
+    grid-area: item4;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#item5{
+    grid-area: item5;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+#item6{
+    grid-area: item6;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#item7{
+    grid-area: item7;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#item8{
+    grid-area: item8;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#item9{
+    grid-area: item9;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#item10{
+    grid-area: item10;
+
+    img{
+        transition: 1s;
+    }
+
+    img:hover{
+        height: 100%;
+        width: 100%;
+    }
+}
+
 /*FIN SECTION PRODUCTOS*/
 /*SECTION BUDINES*/
 #preciosBudines{
@@ -358,7 +395,7 @@ label{
     flex-direction: row;
     justify-content:space-evenly;
     align-content: center;
-
+    
 }
 
 .precios{
@@ -366,7 +403,7 @@ label{
     border-radius: 7px;
     display: inline;
     padding: 7px;
-
+    
     img{
         border-radius: 7px;
     }
@@ -374,7 +411,7 @@ label{
         font-family: $fontParrafos;
         font-weight: bolder;
     }
-
+    
 }
 
 
