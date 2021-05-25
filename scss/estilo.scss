@@ -216,14 +216,8 @@ label{
     padding-top: 3px;
 }
 
-#btn_Limpiar{
-    margin-right: 5px;
-}
 /*FIN SECTION CONTACTOS*/
 /*SECTION PROPIEDADES*/
-#tituBudines,#titContactos{
-    padding-top: 39px;
-}
 
 .cards_container{
     margin: 0%;
@@ -470,6 +464,25 @@ label{
     
 }
 
+.btn{
+    display: block;
+
+    button{
+        background:seagreen ;
+        color: white;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        padding: 9px 8px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background: rgb(35, 110, 68);
+    }
+}
+
 /*FIN SECTION BUDINES Y ALFAJORES*/
 /*FOOTER*/
 footer{
@@ -492,7 +505,7 @@ footer{
 
     #grilla{
         grid-template-columns:  100% ;
-        grid-template-rows:  20% 30% 100% 15%;
+        grid-template-rows:  20% 35% 100% 10%;
     }
     //NAV//
     #menu{
@@ -522,20 +535,22 @@ footer{
     //FIN DEL SECTION INDEX//
 /*SECTION PRODUCTOS*/
     #galeria{
-    height: 220px;
+    height: 60%;
     width: 100%;
     margin: 0%;
     padding: 0%;
-    padding-top: 60px;
+    padding-top: 100px;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 33% 33% 33% ;
+    grid-template-columns: 35% 35%;
+    grid-template-rows: 20% 20% 20% 20% 20% 20%  ;
     grid-template-areas: 
-    "item1  item2  item3  item4 "
-    "item1  item5  item6  item8 "
-    "item7  item9 item10  item8"
-    ;
-    grid-row-gap: 5px;
+    "item1  item2"
+    "item1  item5"
+    "item7  item9"
+    "item3  item4"
+    "item6  item8"
+    "item10  item8";
+    grid-row-gap: 7px;
     grid-column-gap: 7px;
     justify-content: center;
     align-content: center;
@@ -609,47 +624,41 @@ footer{
     //SECTION PROPIEDADES//
 
     .precios_container{
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-}
+        display: flex;
+    }
+    
+    .precios{
+        width: 140px;
+        height: 162px;
+        box-shadow: 0 7px 7px rgba(0, 0, 0, 0.363);
+        text-align: center;
+        margin-bottom: 10px;
+        
+        img{
+            padding-top: 0%;
+            width: 120px;
+            height: 80px;
+        }
+        
+        h5{
+            margin-top:0%;
+            font-size: 15px;
+        }
+        p{
+            margin: 2px;
+            font-size: 13px;
+        }
+        
+    }
 
-.precios{
-    background-color: rgba(128, 128, 128, 0.644);
-    width: 220px;
-    height: 270px;
-    border-radius: 8px;
-    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.363);
-    overflow: hidden;
-    margin: 10px;
-    text-align: center;
-    margin-bottom: 50px;
-    
-    img{
-        padding-top: 10px;
-        width: 200px;
-        height: 150px;
-        border-radius: 8px;
-    }
-    
-    h5{
+    button{
         margin: 0%;
-        margin-top: 10px;
-        font-family: $fontParrafos;
-        font-size: 20px;
+        font-size: 10px;
+        padding: 9px 8px;
     }
-    p{
-        margin: 5px;
-        font-family: $fontParrafos;
-        font-size: 13px;
-    }
+
     
-}
+    //FIN SECTION PROPIEDADES// 
 
 
 
