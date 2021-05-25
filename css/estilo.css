@@ -31,6 +31,8 @@ header {
 /*FIN DEL HEADER*/
 /*NAV*/
 nav {
+  margin: 0%;
+  padding: 0%;
   background-color: teal;
   grid-area: nav; }
 
@@ -174,6 +176,9 @@ ol, tr, #datos, #formulario {
 label {
   padding-top: 3px; }
 
+#btn_Limpiar {
+  margin-right: 5px; }
+
 /*FIN SECTION CONTACTOS*/
 /*SECTION PROPIEDADES*/
 #tituBudines, #titContactos {
@@ -215,7 +220,7 @@ label {
     font-family: "Montserrat", sans-serif;
     font-size: 13px; }
 
-/*FIN SECTION CONTACTOS*/
+/*FIN SECTION PROPIEDADES*/
 /*SECTION PRODUCTOS*/
 #galeria {
   height: 100%;
@@ -315,7 +320,7 @@ label {
     width: 100%; }
 
 /*FIN SECTION PRODUCTOS*/
-/*SECTION BUDINES*/
+/*SECTION BUDINES Y ALFAJORES*/
 .precios_container {
   margin: 0%;
   padding: 0%;
@@ -351,7 +356,7 @@ label {
     font-family: "Montserrat", sans-serif;
     font-size: 13px; }
 
-/*FIN SECTION BUDINES*/
+/*FIN SECTION BUDINES Y ALFAJORES*/
 /*FOOTER*/
 footer {
   background: grey;
@@ -366,3 +371,112 @@ footer {
   padding-top: 12px; }
 
 /*FIN DEL FOOTER*/
+@media only screen and (max-width: 320px) {
+  #grilla {
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 30% 100% 15%; }
+  #menu {
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 20% 20% 20%; }
+  section {
+    background-image: url(../imagenes/plantas.jpg); }
+  #slogan {
+    padding-right: 0%; }
+    #slogan p {
+      margin-left: 50px;
+      background-color: rgba(214, 214, 214, 0.315);
+      color: goldenrod;
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      text-align: center;
+      font-weight: lighter;
+      text-align: center; }
+  /*SECTION PRODUCTOS*/
+  #galeria {
+    height: 220px;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: "item1  item2  item3  item4 " "item1  item5  item6  item8 " "item7  item9 item10  item8";
+    grid-row-gap: 5px;
+    grid-column-gap: 7px;
+    justify-content: center;
+    align-content: center; }
+  .imagen_galeria {
+    width: 96%;
+    height: 96%; }
+  .cards_container {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "algarrobaProp  canelaProp"  "lucumaProp     cocoProp"; }
+    .cards_container #algarrobaProp {
+      grid-area: algarrobaProp; }
+    .cards_container #canelaProp {
+      grid-area: canelaProp; }
+    .cards_container #lucumaProp {
+      grid-area: lucumaProp; }
+    .cards_container #cocoProp {
+      grid-area: cocoProp; }
+    .cards_container .card {
+      margin: 0%;
+      margin-top: 5px;
+      margin-left: 5px;
+      width: 150px;
+      height: 225px;
+      box-shadow: 0 7px 7px rgba(0, 0, 0, 0.363); }
+    .cards_container .card:hover {
+      box-shadow: 0 10px 14px rgba(0, 0, 0, 0.363); }
+    .cards_container .card img {
+      padding-top: 10px;
+      width: 125px;
+      height: 70px; }
+    .cards_container h4 {
+      margin-top: 2px;
+      font-size: 15px; }
+    .cards_container p {
+      margin-top: 2px;
+      font-size: 10px; }
+  .precios_container {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center; }
+  .precios {
+    background-color: rgba(128, 128, 128, 0.644);
+    width: 220px;
+    height: 270px;
+    border-radius: 8px;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.363);
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    margin-bottom: 50px; }
+    .precios img {
+      padding-top: 10px;
+      width: 200px;
+      height: 150px;
+      border-radius: 8px; }
+    .precios h5 {
+      margin: 0%;
+      margin-top: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px; }
+    .precios p {
+      margin: 5px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 13px; }
+  footer p {
+    font-size: 13px; } }
