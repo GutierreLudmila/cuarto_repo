@@ -12,7 +12,10 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 17% 7% 68% 8%;
-  grid-template-areas: "header" "nav" "section" "footer";
+  grid-template-areas: "header"
+ "nav"
+ "section"
+ "footer";
   grid-row-gap: 7px; }
 
 /*HEADER*/
@@ -106,33 +109,42 @@ section {
 
 /* FIN SECTION INDEX*/
 /*SECTION QUIENES SOMOS*/
-#nosotras {
-  background-image: url(../imagenes/nosotrasUno.jpeg);
-  height: 300px;
-  width: 400px;
-  background-size: 100%;
-  margin-left: 200px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.842); }
+.section_quienes {
+  display: flex; }
 
-#contenedorQuienes {
-  display: block; }
+.contenedor_quienes {
+  margin: 0%;
+  padding: 0%;
+  height: 100%;
+  width: 100%;
+  display: flex; }
 
-#tituloQuienes {
-  padding-left: 200px;
-  font-size: 40px;
-  width: 300px;
-  height: 50px; }
+.foto_quienes {
+  overflow: hidden;
+  height: 100%;
+  width: 70%; }
+  .foto_quienes img {
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 6px 6px rgba(128, 128, 128, 0.5);
+    margin-left: 100px;
+    margin-top: 50px; }
 
-#relato {
-  padding-left: 250px;
-  color: goldenrod;
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  text-align: left;
-  font-weight: lighter;
-  width: 400px; }
+.contenedor_historia {
+  width: 50%;
+  margin-right: 150px; }
+  .contenedor_historia h3 {
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    color: goldenrod;
+    font-size: 50px; }
+  .contenedor_historia p {
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: goldenrod;
+    font-size: 15px;
+    line-height: 20px; }
 
 /*FIN SECTION QUIENES SOMOS*/
 /*SECTION CONTACTOS*/
@@ -224,7 +236,9 @@ label {
   display: grid;
   grid-template-columns: 18% 18% 18% 18%;
   grid-template-rows: 32% 32% 32%;
-  grid-template-areas: "item1  item2  item3  item4 " "item1  item5  item6  item8 " "item7  item9 item10  item8";
+  grid-template-areas: "item1  item2  item3  item4 "
+ "item1  item5  item6  item8 "
+ "item7  item9 item10  item8";
   grid-row-gap: 5px;
   grid-column-gap: 7px;
   justify-content: center; }
@@ -379,13 +393,30 @@ footer {
   padding-top: 12px; }
 
 /*FIN DEL FOOTER*/
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 720px) {
   #grilla {
     grid-template-columns: 100%;
-    grid-template-rows: 20% 35% 100% 10%; }
+    grid-template-rows: 20% 25% 100% 10%; }
+  .tituloHeader {
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 10px; }
   #menu {
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 20% 20% 20% 20%; }
+    grid-template-columns: 30% 39% 30%;
+    grid-template-rows: 50% 50%;
+    justify-items: center; }
+    #menu li {
+      position: relative;
+      background-color: teal; }
+      #menu li a {
+        font-size: 15px; }
+    #menu li a:hover {
+      font-size: 18px; }
+  #propiedadesNav {
+    margin-left: 50px; }
+  #contactosNav {
+    margin-left: 20px; }
   section {
     background-image: url(../imagenes/plantas.jpg); }
   #slogan {
@@ -409,7 +440,12 @@ footer {
     display: grid;
     grid-template-columns: 35% 35%;
     grid-template-rows: 20% 20% 20% 20% 20% 20%;
-    grid-template-areas: "item1  item2" "item1  item5" "item7  item9" "item3  item4" "item6  item8" "item10  item8";
+    grid-template-areas: "item1  item2"
+ "item1  item5"
+ "item7  item9"
+ "item3  item4"
+ "item6  item8"
+ "item10  item8";
     grid-row-gap: 7px;
     grid-column-gap: 7px;
     justify-content: center;
@@ -425,7 +461,8 @@ footer {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "algarrobaProp  canelaProp"  "lucumaProp     cocoProp"; }
+    grid-template-areas: "algarrobaProp  canelaProp" 
+ "lucumaProp     cocoProp"; }
     .cards_container #algarrobaProp {
       grid-area: algarrobaProp; }
     .cards_container #canelaProp {
@@ -457,23 +494,70 @@ footer {
     display: flex; }
   .precios {
     width: 140px;
-    height: 162px;
+    height: 152px;
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.363);
     text-align: center;
-    margin-bottom: 10px; }
+    margin-bottom: 5px;
+    margin-top: 5px; }
     .precios img {
       padding-top: 0%;
       width: 120px;
       height: 80px; }
     .precios h5 {
       margin-top: 0%;
-      font-size: 15px; }
+      font-size: 12px; }
     .precios p {
       margin: 2px;
       font-size: 13px; }
   button {
+    height: 30px;
     margin: 0%;
-    font-size: 10px;
-    padding: 9px 8px; }
+    font-size: 7px;
+    padding: 2px 2px; }
+  /*SECTION QUIENES SOMOS*/
+  .section_quienes {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "contenedorTexto"
+ "contenedorImagen"; }
+  .contenedor_quienes {
+    grid-area: contenedorImagen;
+    margin: 0%;
+    padding: 0%;
+    height: 200px;
+    width: 100%;
+    display: flex; }
+  .foto_quienes {
+    overflow: hidden;
+    height: 100%;
+    width: 100%; }
+    .foto_quienes img {
+      width: 200px;
+      height: 150px;
+      border-radius: 8px;
+      box-shadow: 6px 6px rgba(128, 128, 128, 0.5);
+      margin-left: 20px;
+      margin-top: 10px; }
+  .contenedor_historia {
+    grid-area: contenedorTexto;
+    display: block;
+    width: 100%;
+    height: 250px;
+    margin-right: 150px; }
+    .contenedor_historia h3 {
+      background: rgba(255, 255, 255, 0.644);
+      margin-bottom: 20px;
+      font-family: "Playfair Display", serif;
+      color: goldenrod;
+      font-size: 30px; }
+    .contenedor_historia p {
+      background: rgba(255, 255, 255, 0.644);
+      padding-left: 20px;
+      font-family: "Montserrat", sans-serif;
+      color: goldenrod;
+      font-size: 10px;
+      line-height: 20px; }
+  /*FIN SECTION QUIENES SOMOS*/
   footer p {
     font-size: 13px; } }

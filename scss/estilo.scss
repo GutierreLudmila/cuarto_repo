@@ -136,40 +136,49 @@ section{
 }
 /* FIN SECTION INDEX*/
 /*SECTION QUIENES SOMOS*/
-#nosotras{
-    background-image: url(../imagenes/nosotrasUno.jpeg);
-    height: 300px;
-    width: 400px;
-    background-size: 100%;
-    margin-left: 200px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.842);
+.section_quienes{
+    display: flex;
+}
+.contenedor_quienes{
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.foto_quienes{
+    overflow: hidden;
+    height: 100%;
+    width: 70%;
+
+    img{
+        width: 400px;
+        height: 300px;
+        border-radius: 8px;
+        box-shadow: 6px 6px rgba(128, 128, 128, 0.5);
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+}
+.contenedor_historia{
+    width: 50%;
+    margin-right: 150px;
     
+    h3{
+        margin-bottom: 20px;
+        font-family: $fontTitulos;
+        color: goldenrod;
+        font-size: 50px;
+    }
+
+    p{
+        padding-left: 20px;
+        font-family: $fontParrafos;
+        color: goldenrod;
+        font-size: 15px;
+        line-height: 20px;
+    }
 }
-
-
-
-#contenedorQuienes{
-    display: block;
-}
-#tituloQuienes{
-    padding-left: 200px;
-    font-size: $tamañoTitulos;
-    width: 300px;
-    height: 50px;
-}
-
-#relato{
-    padding-left:250px;
-    color: $colorTitulos;
-    font-family: $fontTitulos;
-    font-size: 20px;
-    text-align: left;
-    font-weight: lighter;
-    width: 400px;
-}
-
 
 /*FIN SECTION QUIENES SOMOS*/
 
@@ -501,16 +510,46 @@ footer{
 }
 /*FIN DEL FOOTER*/
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 720px){
 
     #grilla{
         grid-template-columns:  100% ;
-        grid-template-rows:  20% 35% 100% 10%;
+        grid-template-rows:  20% 25% 100% 10%;
+    }
+    //HEADER
+    .tituloHeader{
+        font-size: 50px;
+        font-weight: lighter;
+        text-align: center;
+        padding-bottom: 10px;
+        
     }
     //NAV//
     #menu{
-        grid-template-columns: 100%;
-        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-columns:  30% 39% 30%;
+        grid-template-rows: 50% 50%;
+        justify-items:center;
+
+            li{
+                position:relative;
+                background-color: $colorMenu;
+                
+                a{
+                    font-size: 15px;
+                }
+            }
+            li a:hover{
+                font-size: 18px;
+                
+            } 
+        }
+        
+    #propiedadesNav{
+        margin-left: 50px;
+    }
+
+    #contactosNav{
+        margin-left: 20px;
     }
     //FIN DEL NAV//
 
@@ -561,7 +600,7 @@ footer{
     }
 
 //FIN SECTION PRODUCTOS//
-    //SECTION PROPIEDADES//
+//SECTION PROPIEDADES//
     .cards_container{
     margin: 0%;
     padding: 0%;
@@ -622,17 +661,18 @@ footer{
     }
     }
     //SECTION PROPIEDADES//
-
+//SECTION BUDINES Y ALFAJORES
     .precios_container{
         display: flex;
     }
     
     .precios{
         width: 140px;
-        height: 162px;
+        height: 152px;
         box-shadow: 0 7px 7px rgba(0, 0, 0, 0.363);
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
         
         img{
             padding-top: 0%;
@@ -642,7 +682,7 @@ footer{
         
         h5{
             margin-top:0%;
-            font-size: 15px;
+            font-size: 12px;
         }
         p{
             margin: 2px;
@@ -652,15 +692,72 @@ footer{
     }
 
     button{
+        height: 30px;
         margin: 0%;
-        font-size: 10px;
-        padding: 9px 8px;
+        font-size: 7px;
+        padding: 2px 2px;
     }
+//SECTION BUDINES Y ALFAJORES
 
     
-    //FIN SECTION PROPIEDADES// 
+/*SECTION QUIENES SOMOS*/
+.section_quienes{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+                        "contenedorTexto"
+                        "contenedorImagen";
+    
+}
+.contenedor_quienes{
+    grid-area: contenedorImagen;
+    margin: 0%;
+    padding: 0%;
+    height: 200px;
+    width: 100%;
+    display: flex;
+}
+.foto_quienes{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 
+    img{
+        width: 200px;
+        height: 150px;
+        border-radius: 8px;
+        box-shadow: 6px 6px rgba(128, 128, 128, 0.5);
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+.contenedor_historia{
+    grid-area: contenedorTexto;
+    display: block;
+    width: 100%;
+    height: 250px;
+    margin-right: 150px;
+    
+    h3{
+        background: rgba(255, 255, 255, 0.644);
+        margin-bottom: 20px;
+        font-family: $fontTitulos;
+        color: goldenrod;
+        font-size: 30px;
+    }
 
+    p{
+        background: rgba(255, 255, 255, 0.644);
+        padding-left: 20px;
+        font-family: $fontParrafos;
+        color: goldenrod;
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+/*FIN SECTION QUIENES SOMOS*/
 
 
 
